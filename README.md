@@ -17,7 +17,7 @@ $$ \frac{d^2 X}{dr_*^2} - F(r)\frac{dX}{dr_*} - U(r) X = 0, $$
 
 or, after removal of the first-derivative term,
 
-$$ \frac{d^2 \Psi}{dr_*^2} + \bigl(\omega^2 - V_{\rm eff}(r_*)\bigr)\Psi = 0.  $$
+$$\frac{d^2 \Psi}{dr_*^2} + \left(\omega^2 - V_{\mathrm{eff}}(r_*)\right)\Psi = 0$$
 
 This makes it possible to:
 
@@ -41,18 +41,18 @@ $$ k = \omega - m \Omega_H, \qquad \Omega_H = \frac{a}{2Mr_+},$$ with $$r_+ = M$
 For the horizon-normalized SN solutio $$X \sim e^{-ik r_*} \qquad (r_* \to -\infty)$$
 and at infinity
 
-$$ X \sim A^{\rm SN}_{\rm out} e^{+i\omega r_*} + A^{\rm SN}_{\rm in} e^{-i\omega r_*}.  $$
+$$ X \sim A^{SN}_{out} e^{+i\omega r_*} + A^{SN}_{ in} e^{-i\omega r_*}.  $$
 
 For spin $$s=-2$$, the fitted SN amplitudes are not yet the physical amplitudes.
 They must be converted to Teukolsky amplitudes before forming flux ratios.
 
 In the conventions used here,
 
-$$ B^{\rm inc} = -\frac{A^{\rm SN}_{\rm in}}{4\omega^2}, \qquad B^{\rm hole} = \frac{A^{\rm SN}_{\rm trans}}{d_{\ell m\omega}}.$$
+$$ B^{\rm inc} = -\frac{A^{SN}_{\rm in}}{4\omega^2}, \qquad B^{\rm hole} = \frac{A^{SN}_{\rm trans}}{d_{\ell m\omega}}.$$
 
-For a horizon-normalized integration, $$A^{\rm SN}_{\rm trans}=1$$, so the greybody factor is
+For a horizon-normalized integration, $$A^{SN}_{\rm trans}=1$$, so the greybody factor is
 
-$$ \Gamma_{\ell m\omega}^{(-2)} = \alpha_{\ell m\omega} \left| \frac{4\omega^2}{d_{\ell m\omega} A^{\rm SN}_{\rm in}} \right|^2.  $$
+$$ \Gamma_{\ell m\omega}^{(-2)} = \alpha_{\ell m\omega} \left| \frac{4\omega^2}{d_{\ell m\omega} A^{ SN}_{\rm in}} \right|^2.  $$
 
 This is the main quantity computed by the code.
 
@@ -76,7 +76,7 @@ A typical workflow is:
   Numerical integration of the SN equation with ingoing horizon boundary conditions.
 
 - `fit/`
-  Asymptotic extraction of $$A^{\rm SN}_{\rm in}$$ and $$A^{\rm SN}_{\rm out}$$
+  Asymptotic extraction of $$A^{ SN}_{ in}$$ and $$A^{ SN}_{out}$$
 
 - `flux/`
   Conversion from SN amplitudes to Teukolsky amplitudes and greybody factors.
@@ -106,7 +106,7 @@ The radial equation is integrated from the near-horizon region to a large positi
 
 In the far region the SN field is fit to
 
-$$ X(r_*) \approx A^{\rm SN}_{\rm out} e^{+i\omega r_*} + A^{\rm SN}_{\rm in} e^{-i\omega r_*}.  $$
+$$ X(r_*) \approx A^{SN}_{ out} e^{+i\omega r_*} + A^{SN}_{in} e^{-i\omega r_*}.  $$
 
 ### 4. Flux conversion
 

@@ -12,8 +12,11 @@ The Sasaki–Nakamura transformation converts the problem into a short-ranged ra
 whose asymptotic behavior is simple plane-wave scattering.
 
 In the conventions used here, the SN field satisfies
+
 $$ \frac{d^2 X}{dr_*^2} - F(r)\frac{dX}{dr_*} - U(r) X = 0, $$
+
 or, after removal of the first-derivative term,
+
 $$ \frac{d^2 \Psi}{dr_*^2} + \bigl(\omega^2 - V_{\rm eff}(r_*)\bigr)\Psi = 0.  $$
 
 This makes it possible to:
@@ -28,21 +31,27 @@ This makes it possible to:
 
 We work in Kerr with mass $$M$$, spin $$a=M$$, frequency $$\omega$$, and azimuthal number $$m$$.
 The tortoise coordinate is defined by
+
 $$ \frac{dr_*}{dr} = \frac{r^2+a^2}{\Delta}, \qquad \Delta = r^2 - 2Mr + a^2.  $$
 
 At the horizon, the relevant wave number is
+
 $$ k = \omega - m \Omega_H, \qquad \Omega_H = \frac{a}{2Mr_+},$$ with $$r_+ = M$$. 
 
 For the horizon-normalized SN solutio $$X \sim e^{-ik r_*} \qquad (r_* \to -\infty)$$
 and at infinity
+
 $$ X \sim A^{\rm SN}_{\rm out} e^{+i\omega r_*} + A^{\rm SN}_{\rm in} e^{-i\omega r_*}.  $$
 
 For spin $$s=-2$$, the fitted SN amplitudes are not yet the physical amplitudes.
 They must be converted to Teukolsky amplitudes before forming flux ratios.
 
 In the conventions used here,
+
 $$ B^{\rm inc} = -\frac{A^{\rm SN}_{\rm in}}{4\omega^2}, \qquad B^{\rm hole} = \frac{A^{\rm SN}_{\rm trans}}{d_{\ell m\omega}}.$$
+
 For a horizon-normalized integration, $$A^{\rm SN}_{\rm trans}=1$$, so the greybody factor is
+
 $$ \Gamma_{\ell m\omega}^{(-2)} = \alpha_{\ell m\omega} \left| \frac{4\omega^2}{d_{\ell m\omega} A^{\rm SN}_{\rm in}} \right|^2.  $$
 
 This is the main quantity computed by the code.
@@ -67,7 +76,7 @@ A typical workflow is:
   Numerical integration of the SN equation with ingoing horizon boundary conditions.
 
 - `fit/`
-  Asymptotic extraction of $$A^{\rm SN}_{\rm in}\) and \(A^{\rm SN}_{\rm out}$$
+  Asymptotic extraction of $$A^{\rm SN}_{\rm in}$$ and $$A^{\rm SN}_{\rm out}$$
 
 - `flux/`
   Conversion from SN amplitudes to Teukolsky amplitudes and greybody factors.
@@ -84,8 +93,10 @@ You can rename these sections to match the actual layout of the repo.
 At large negative tortoise coordinate,
 
 $$X(r_*) \sim e^{-ik r_*},$$
+
 so the numerical integration is initialized with
-$$ X(r_{*,\min}) = e^{-ik r_{*,\min}}, \qquad X'(r_{*,\min}) = -ik\, e^{-ik r_{*,\min}}.  $$
+
+$$ X(r_{*\min}) = e^{-ik r_{*\min}}, \qquad X'(r_{*\min}) = -ik\, e^{-ik r_{*\min}}.  $$
 
 ### 2. Outward integration
 
@@ -94,8 +105,8 @@ The radial equation is integrated from the near-horizon region to a large positi
 ### 3. Asymptotic fit
 
 In the far region the SN field is fit to
-$$ X(r_*) \approx A^{\rm SN}_{\rm out} e^{+i\omega r_*} + A^{\rm SN}_{\rm in} e^{-i\omega r_*}.
-$$
+
+$$ X(r_*) \approx A^{\rm SN}_{\rm out} e^{+i\omega r_*} + A^{\rm SN}_{\rm in} e^{-i\omega r_*}.  $$
 
 ### 4. Flux conversion
 
@@ -104,6 +115,7 @@ For $$s=-2$$, the fitted incoming SN amplitude is converted to the physical Teuk
 ## Extremal Kerr
 
 In the extremal limit \(a=M\),
+
 $$ r_+ = M, \qquad \Omega_H = \frac{1}{2M}, \qquad k = \omega - \frac{m}{2M}.  $$
 
 The tortoise coordinate becomes

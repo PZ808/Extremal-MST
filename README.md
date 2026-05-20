@@ -92,21 +92,21 @@ You can rename these sections to match the actual layout of the repo.
 
 At large negative tortoise coordinate,
 
-$$X(r_*) \sim e^{-ik r_*},$$
+$$X(r_\ast) \sim e^{-ik r_\ast},$$
 
 so the numerical integration is initialized with
 
-$$ X(r_{*\min}) = e^{-ik r_{*\min}}, \qquad X'(r_{*\min}) = -ik\, e^{-ik r_{*\min}}.  $$
+$$ X(r_{\ast\min}) = e^{-ik r_{\ast\min}}, \qquad X'(r_{\ast\min}) = -ik\, e^{-ik r_{\ast\min}}.  $$
 
 ### 2. Outward integration
 
-The radial equation is integrated from the near-horizon region to a large positive tortoise coordinate \(r_{*,\max}\), chosen so that the solution is in the asymptotic far zone.
+The radial equation is integrated from the near-horizon region to a large positive tortoise coordinate \(r_{\ast,\max}\), chosen so that the solution is in the asymptotic far zone.
 
 ### 3. Asymptotic fit
 
 In the far region the SN field is fit to
 
-$$ X(r_*) \approx A^{SN}_{ out} e^{+i\omega r_*} + A^{SN}_{in} e^{-i\omega r_*}.  $$
+$$ X(r_\ast) \approx A^{SN}_{ out} e^{+i\omega r_\ast} + A^{SN}_{in} e^{-i\omega r_\ast}.  $$
 
 ### 4. Flux conversion
 

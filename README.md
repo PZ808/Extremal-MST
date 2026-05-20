@@ -70,13 +70,13 @@ This is the main quantity computed by the code.
 A typical workflow is:
 
 - `potential/`
-  Construction of $$F(r)$$, $$U(r)$$, and/or the Schrödinger-form $$V_{\rm eff}(r_*)$$.
+  Construction of $$F(r)$$, $$U(r)$$, and/or the Schrödinger-form $$V_{\rm eff}(r_\ast)$$.
 
 - `radial/`
   Numerical integration of the SN equation with ingoing horizon boundary conditions.
 
 - `fit/`
-  Asymptotic extraction of $$A^{ SN}_{ in}$$ and $$A^{ SN}_{out}$$
+  Asymptotic extraction of $$A^{SN}{}_{in}$$ and $$A^{SN}{}_{out}$$
 
 - `flux/`
   Conversion from SN amplitudes to Teukolsky amplitudes and greybody factors.
@@ -96,17 +96,17 @@ $$X(r_\ast) \sim e^{-ik r_\ast},$$
 
 so the numerical integration is initialized with
 
-$$ X(r_{\ast\min}) = e^{-ik r_{\ast\min}}, \qquad X'(r_{\ast\min}) = -ik\, e^{-ik r_{\ast\min}}.  $$
+$$ X(r_{\ast\min}) = e^{-ik r_{\ast,\min}}, \qquad X'(r_{\ast,\min}) = -ik\, e^{-ik r_{\ast,\min}}.  $$
 
 ### 2. Outward integration
 
-The radial equation is integrated from the near-horizon region to a large positive tortoise coordinate \(r_{\ast,\max}\), chosen so that the solution is in the asymptotic far zone.
+The radial equation is integrated from the near-horizon region to a large positive tortoise coordinate $$r_{\ast,\max}$$, chosen so that the solution is in the asymptotic far zone.
 
 ### 3. Asymptotic fit
 
 In the far region the SN field is fit to
 
-$$ X(r_\ast) \approx A^{SN}_{ out} e^{+i\omega r_\ast} + A^{SN}_{in} e^{-i\omega r_\ast}.  $$
+$$ X(r_\ast) \approx A^{SN}_{out} e^{+i\omega r_\ast} + A^{SN}_{in} e^{-i\omega r_\ast}.  $$
 
 ### 4. Flux conversion
 
@@ -120,7 +120,7 @@ $$ r_+ = M, \qquad \Omega_H = \frac{1}{2M}, \qquad k = \omega - \frac{m}{2M}.  $
 
 The tortoise coordinate becomes
 
-$$r_* = r + 2M \log(r-M) - \frac{2M^2}{r-M} +\mathrm{const.} $$
+$$r_\ast = r + 2M \log(r-M) - \frac{2M^2}{r-M} +\mathrm{const.} $$
 
 This regime is particularly delicate numerically because of the long throat near the horizon and the onset of superradiant behavior when $$k<0$$.
 

@@ -13,11 +13,11 @@ whose asymptotic behavior is simple plane-wave scattering.
 
 In the conventions used here, the SN field satisfies
 
-$$ \frac{d^2 X}{dr_*^2} - F(r)\frac{dX}{dr_*} - U(r) X = 0, $$
+$$ \frac{d^2 X}{dr_\ast^2} - F(r)\frac{dX}{dr_\ast} - U(r) X = 0, $$
 
 or, after removal of the first-derivative term,
 
-$$\frac{d^2 \Psi}{dr_*^2} + \left(\omega^2 - V_{\mathrm{eff}}(r_*)\right)\Psi = 0$$
+$$\frac{d^2 \Psi}{dr_\ast^2} + \left(\omega^2 - V_{\mathrm{eff}}(r_\ast)\right)\Psi = 0$$
 
 This makes it possible to:
 
@@ -32,16 +32,16 @@ This makes it possible to:
 We work in Kerr with mass $$M$$, spin $$a=M$$, frequency $$\omega$$, and azimuthal number $$m$$.
 The tortoise coordinate is defined by
 
-$$ \frac{dr_*}{dr} = \frac{r^2+a^2}{\Delta}, \qquad \Delta = r^2 - 2Mr + a^2.  $$
+$$ \frac{dr_\ast}{dr} = \frac{r^2+a^2}{\Delta}, \qquad \Delta = r^2 - 2Mr + a^2.  $$
 
 At the horizon, the relevant wave number is
 
-$$ k = \omega - m \Omega_H, \qquad \Omega_H = \frac{a}{2Mr_+},$$ with $$r_+ = M$$. 
+$$ k = \omega - m \Omega_{H}, \qquad \Omega_{H} = \frac{a}{2Mr_+},$$ with $r_+ = M$. 
 
-For the horizon-normalized SN solutio $$X \sim e^{-ik r_*} \qquad (r_* \to -\infty)$$
+For the horizon-normalized SN solution $$X \sim e^{-ik r_{\ast}} \qquad (r_\ast \to -\infty)$$
 and at infinity
 
-$$ X \sim A^{SN}_{out} e^{+i\omega r_*} + A^{SN}_{ in} e^{-i\omega r_*}.  $$
+$$ X \sim A^{SN}_{out} e^{+i\omega r_\ast} + A^{SN}_{in} e^{-i\omega r_\ast}.  $$
 
 For spin $$s=-2$$, the fitted SN amplitudes are not yet the physical amplitudes.
 They must be converted to Teukolsky amplitudes before forming flux ratios.
@@ -59,7 +59,7 @@ This is the main quantity computed by the code.
 ## What this repository does
 
 - builds the SN effective potential for Kerr,
-- integrates the radial equation numerically in $$r_*$$,
+- integrates the radial equation numerically in $$r_\ast$$,
 - extracts asymptotic amplitudes by fitting in the far region,
 - computes gravitational greybody factors for fixed $$\ell,m,\omega$$,
 - supports extremal Kerr $$a=M$$ and near-extremal regimes,
